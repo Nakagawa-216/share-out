@@ -35,9 +35,29 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
+    '@nuxtjs/axios',
+    '@nuxtjs/auth'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  auth: {
+    redirect: {
+      login: '/users/login',
+      logout: '/',
+      callback: false,
+      home: '/users/profile',
+    },
+    strategies: {
+      local: {
+        endpoints: {
+          login: {url: '/api/v1/auth/login', method: 'post', propaetyName: 'token' },
+          logout: {url: '/api/v1/auth/login', method: 'post' },
+          user: false,
+        }
+      }
+    },
   }
 }
