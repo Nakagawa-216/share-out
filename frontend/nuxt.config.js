@@ -22,6 +22,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/axios.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -43,21 +44,30 @@ export default {
   build: {
   },
 
+  
+  axios: {
+    baseURL: 'http://localhost:5000'
+  },
+  
+
   auth: {
     redirect: {
-      login: '/users/login',
-      logout: '/',
+      login: '/login', //middleware:authを設定したURLにアクセスがあった場合の、リダイレクト先。
+      logout: '/', //ログアウト後のリダイレクト先
       callback: false,
-      home: '/users/profile',
-    },
+      home: '/' ///ログイン後のリダイレクト先。
+     },
     strategies: {
       local: {
         endpoints: {
-          login: {url: '/api/v1/auth/login', method: 'post', propaetyName: 'token' },
-          logout: {url: '/api/v1/auth/login', method: 'post' },
-          user: false,
-        }
-      }
-    },
-  }
+          //ログイン処理に関する設定
+          login: { url: '/api/auth/sign_in', method: 'post',propertyName: 'access_token'}, 
+          //ログアウト処理に関する設定
+          logout: { url: '/api/auth/sign_out', method: 'delete' },
+          //ログイン時にユーザー情報を保存するか。
+          user: false 
+         },
+       }
+     },
+   },
 }
