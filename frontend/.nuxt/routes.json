@@ -1,0 +1,26 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "/app/pages/about.vue",
+    "chunkName": "pages/about"
+  },
+  {
+    "name": "App",
+    "path": "/App",
+    "component": "/app/pages/App.vue",
+    "chunkName": "pages/App"
+  },
+  {
+    "name": "users-signup2",
+    "path": "/users/signup2",
+    "component": "/app/pages/users/signup2.vue",
+    "chunkName": "pages/users/signup2"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/app/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]
