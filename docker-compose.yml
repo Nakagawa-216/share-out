@@ -20,7 +20,7 @@ services:
     volumes:
       - ./backend:/app:cached
     ports:
-      - "5000:3000"
+      - "8000:3000"
     depends_on:
       - db
     command: /bin/sh -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0' "

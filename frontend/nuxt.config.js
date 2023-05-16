@@ -46,7 +46,7 @@ export default {
 
   
   axios: {
-    baseURL: 'http://localhost:5000'
+    baseURL: 'http://localhost:3000'
   },
   
 
@@ -59,6 +59,7 @@ export default {
      },
     strategies: {
       local: {
+        tokenType: 'Bearer',
         endpoints: {
           //ログイン処理に関する設定
           login: { url: '/api/auth/sign_in', method: 'post',propertyName: 'access_token'}, 

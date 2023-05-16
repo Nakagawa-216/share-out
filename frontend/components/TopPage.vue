@@ -1,9 +1,7 @@
 <template>
   <div>
     <div>
-      <router-link to="/register">新規登録</router-link>
-      <router-link to="/login">ログイン</router-link>
-      <router-link to="/about">About</router-link>
+      <Navbar @navigate="navigate" />
     </div>
     <div>
       <h1>ShareOut</h1>
@@ -12,3 +10,19 @@
     </div>
   </div>
 </template>
+
+<script>
+import Navbar from "./Navbar.vue";
+
+export default{
+  name: "Toppage",
+  components: {
+    Navbar
+  },
+  methods: {
+    navigate(page) {
+      this.$emit('navigate', page);
+    }
+  }
+};
+</script>

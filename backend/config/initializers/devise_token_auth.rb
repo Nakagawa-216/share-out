@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 DeviseTokenAuth.setup do |config|
-  # By default the authorization headers will change after each request. The
-  # client is responsible for keeping track of the changing tokens. Change
+  # By default the authorization headers will change after each request. Thば  # client is responsible for keeping track of the changing tokens. Change
   # this to false to prevent the Authorization header from changing after
   # each request.
   config.change_headers_on_each_request = false
@@ -46,7 +45,8 @@ DeviseTokenAuth.setup do |config|
                          :'client' => 'client',
                          :'expiry' => 'expiry',
                          :'uid' => 'uid',
-                         :'token-type' => 'token-type' }
+                         :'token-type' => 'token-type',
+                         :'authorization'=> "authorization"}
 
   # Makes it possible to use custom uid column
   # config.other_uid = "foo"
