@@ -2,7 +2,8 @@ FROM node:16.14.0-alpine
 
 ENV HOME="/app" \
     LANG=C.UTF-8 \
-    TZ=Asia/Tokyo
+    TZ=Asia/ \
+    PATH=/usr/bin:$PATH
 
 ENV HOST 0.0.0.0
 
