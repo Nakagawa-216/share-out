@@ -15,6 +15,8 @@ RUN apk update && \
     apk upgrade && \
     apk add --update yarn && \
     yarn install && \
+    rm -rf node_modules\
+    yarn install \
     yarn global add nuxt && \
     rm -rf /var/cache/apk/*
 
