@@ -8,7 +8,14 @@ ENV HOST 0.0.0.0
 
 WORKDIR ${HOME}
 
+#yarn installが実行される前にpackage.json yarn.lockをコピー
+COPY package.json yarn.lock ./
+
 RUN apk update && \
     apk upgrade && \
+    apk add --update yarn && \
     yarn install && \
+    yarn global add nuxt && \
     rm -rf /var/cache/apk/*
+
+COPY . .
