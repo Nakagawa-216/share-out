@@ -15,12 +15,13 @@ RUN apk update && \
     apk upgrade && \
     apk add --update yarn && \
     yarn install && \
+    yarn global add nuxt && \
     rm -rf /var/cache/apk/*
 
-ENV PATH ./node_modules/.bin:$PATH
+ENV PATH /app/node_modules/.bin:$PATH
 
 COPY . .
 
 RUN yarn build
 
-CMD ["yarn", "start"]
+CMD ["yarn", "dev"]
