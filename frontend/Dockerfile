@@ -2,7 +2,7 @@ FROM node:16.14.0-alpine
 
 ENV HOME="/app" \
     LANG=C.UTF-8 \
-    TZ=Asia/ 
+    TZ=Asia/Tokyo 
 
 ENV HOST 0.0.0.0
 
@@ -21,4 +21,6 @@ ENV PATH ./node_modules/.bin:$PATH
 
 COPY . .
 
-CMD ["yarn", "serve"]
+RUN yarn build
+
+CMD ["yarn", "start"]
