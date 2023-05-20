@@ -2,8 +2,7 @@ FROM node:16.14.0-alpine
 
 ENV HOME="/app" \
     LANG=C.UTF-8 \
-    TZ=Asia/ \
-    PATH=/usr/bin:$PATH
+    TZ=Asia/ 
 
 ENV HOST 0.0.0.0
 
@@ -16,9 +15,10 @@ RUN apk update && \
     apk upgrade && \
     apk add --update yarn && \
     yarn install && \
-    rm -rf node_modules\
-    yarn install \
-    yarn global add nuxt && \
     rm -rf /var/cache/apk/*
 
+ENV PATH ./node_modules/.bin:$PATH
+
 COPY . .
+
+CMD ["yarn", "serve"]
