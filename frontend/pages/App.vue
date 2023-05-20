@@ -5,20 +5,20 @@
 </template>
 
 <script>
-import TopPage from "../components/Toppage.vue";
+import  HomePage from "../components/HomePage.vue";
 import Login from "../components/Login.vue";
 import Signup from "../components/Signup.vue";
 
 export default {
   name: "App",
   components: {
-    TopPage,
+    HomePage,
     Login,
     Signup
   },
   data() {
     return {
-      currentComponent: "TopPage"
+      currentComponent: "HomePage"
     };
   },
   methods: {
