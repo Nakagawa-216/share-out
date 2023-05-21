@@ -23,5 +23,3 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY . .
 
 RUN yarn build
-
-CMD ["yarn", "dev"]
