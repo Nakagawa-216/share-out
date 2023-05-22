@@ -25,7 +25,6 @@
       }
     },
     methods: {
-      //loginメソッドの呼び出し
       async loginWithAuthModule() {
         await this.$auth
           .loginWith('local', {

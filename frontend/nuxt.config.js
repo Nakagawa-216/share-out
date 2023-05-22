@@ -46,16 +46,17 @@ export default {
 
   
   axios: {
-    baseURL: 'http://localhost:3000'
+    // railsの立ち上げホストのlocalhost:8000を指定
+    baseURL: 'http://localhost:8000'
   },
   
 
   auth: {
     redirect: {
       login: '/login', //middleware:authを設定したURLにアクセスがあった場合の、リダイレクト先。
-      logout: '/', //ログアウト後のリダイレクト先
+      logout: '/home', //ログアウト後のリダイレクト先
       callback: false,
-      home: '/' ///ログイン後のリダイレクト先。
+      home: '/home' ///ログイン後のリダイレクト先。
      },
     strategies: {
       local: {
