@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div>
-      <Navbar @navigate="navigate" />
-    </div>
     <h1>新規登録</h1>
     <b-form @submit.prevent="signup">
       <div>
@@ -27,11 +24,7 @@
 </template>
 
 <script>
-  import Navbar from './Navbar.vue';
   export default {
-    components: {
-      Navbar
-    },
     data: function() {
       return {
           name: 'Kou',
@@ -63,9 +56,6 @@
             console.log(e);
           }
         }
-      },
-      navigate(page) {
-        this.$emit('navigate', page);
       }
     }
   }

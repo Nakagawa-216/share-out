@@ -1,9 +1,6 @@
 <template>
   <div>
     <div>
-      <Navbar @navigate="navigate" />
-    </div>
-    <div>
       <h1>ShareOut</h1>
     </div>
     <div>

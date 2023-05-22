@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div>
-      <Navbar @navigate="navigate" />
-    </div>
     <h1>ログイン</h1>
     <form @submit.prevent="$emit('navigate','top')">
       <div>
@@ -19,13 +16,8 @@
 </template>
 
 <script>
-import Navbar from "./Navbar.vue"
-
   export default {
     name: "Login",
-    components: {
-      Navbar
-    },
     data() {
       return {
         email: 'tester@example.com',
@@ -53,9 +45,6 @@ import Navbar from "./Navbar.vue"
               return error
             }
           )
-      },
-      navigate(page) {
-        this.$emit('navigate', page);
       }
     }
   }
