@@ -10,17 +10,7 @@
 </template>
 
 <script>
-  import Navbar from "./Navbar.vue";
-
   export default {
     name: "HomePage",
-    components: {
-      Navbar
-    },
-    methods: {
-      navigate(page) {
-        this.$emit('navigate', page);
-      }
-    }
   };
 </script>
