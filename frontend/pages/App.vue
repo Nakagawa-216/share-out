@@ -9,9 +9,9 @@
 <script>
 import UserStatus from "../components/UserStatus.vue";
 import Navbar from "../components/Navbar.vue";
-import HomePage from "../components/HomePage.vue";
-import Login from "../components/Login.vue";
-import Signup from "../components/Signup.vue";
+import HomePage from "./HomePage.vue";
+import Login from "./Login.vue";
+import Signup from "./Signup.vue";
 
 export default {
   name: "App",
