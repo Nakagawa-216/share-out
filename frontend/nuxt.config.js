@@ -46,25 +46,26 @@ export default {
 
   
   axios: {
-    baseURL: 'http://localhost:3000'
+    // railsの立ち上げホストのlocalhost:8000を指定
+    baseURL: 'http://localhost:8000'
   },
   
 
   auth: {
     redirect: {
-      login: '/login', //middleware:authを設定したURLにアクセスがあった場合の、リダイレクト先。
-      logout: '/', //ログアウト後のリダイレクト先
+      login: '/Login', //middleware:authを設定したURLにアクセスがあった場合の、リダイレクト先。
+      logout: '/HomePage', //ログアウト後のリダイレクト先
       callback: false,
-      home: '/' ///ログイン後のリダイレクト先。
+      home: '/Home' ///ログイン後のリダイレクト先。
      },
     strategies: {
       local: {
         tokenType: 'Bearer',
         endpoints: {
           //ログイン処理に関する設定
-          login: { url: '/api/auth/sign_in', method: 'post',propertyName: 'access_token'}, 
+          login: { url: '/api/v1/auth/sign_in', method: 'post',propertyName: 'access_token'}, 
           //ログアウト処理に関する設定
-          logout: { url: '/api/auth/sign_out', method: 'delete' },
+          logout: { url: '/api/v1/auth/sign_out', method: 'delete' },
           //ログイン時にユーザー情報を保存するか。
           user: false 
          },
