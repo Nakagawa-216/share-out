@@ -22,6 +22,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/axios.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -35,9 +36,40 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
+    '@nuxtjs/axios',
+    '@nuxtjs/auth'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+  
+  axios: {
+    // railsの立ち上げホストのlocalhost:8000を指定
+    baseURL: 'http://localhost:8000'
+  },
+  
+
+  auth: {
+    redirect: {
+      login: '/Login', //middleware:authを設定したURLにアクセスがあった場合の、リダイレクト先。
+      logout: '/HomePage', //ログアウト後のリダイレクト先
+      callback: false,
+      home: '/HomePage' ///ログイン後のリダイレクト先。
+     },
+    strategies: {
+      local: {
+        tokenType: 'Bearer',
+        endpoints: {
+          //ログイン処理に関する設定
+          login: { url: '/api/v1/auth/sign_in', method: 'post',propertyName: 'access_token'}, 
+          //ログアウト処理に関する設定
+          logout: { url: '/api/v1/auth/sign_out', method: 'delete' },
+          //ログイン時にユーザー情報を保存するか。
+          user: false 
+         },
+       }
+     },
+   },
 }
