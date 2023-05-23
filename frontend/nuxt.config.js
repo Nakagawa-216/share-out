@@ -48,6 +48,7 @@ export default {
   axios: {
     // railsの立ち上げホストのlocalhost:8000を指定
     baseURL: 'http://localhost:8000'
+
   },
   
 
@@ -57,6 +58,7 @@ export default {
       logout: '/HomePage', //ログアウト後のリダイレクト先
       callback: false,
       home: '/HomePage' ///ログイン後のリダイレクト先。
+      
      },
     strategies: {
       local: {
@@ -66,10 +68,12 @@ export default {
           login: { url: '/api/v1/auth/sign_in', method: 'post',propertyName: 'access_token'}, 
           //ログアウト処理に関する設定
           logout: { url: '/api/v1/auth/sign_out', method: 'delete' },
+
           //ログイン時にユーザー情報を保存するか。
           user: false 
          },
        }
      },
    },
+
 }
