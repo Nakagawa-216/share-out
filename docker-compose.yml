@@ -1,0 +1,38 @@
+version: "3.8"
+services:
+  db:
+    container_name: db
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: app_developmemt
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./tmp/db:/var/lib/mysql
+    #コンテナが再起動するとDBも再起動する
+    restart: always
+
+  backend:
+    container_name: backend
+    build: ./backend/
+    tty: true
+    volumes:
+      - ./backend:/app:cached
+    ports:
+      - "8000:3000"
+    depends_on:
+      - db
+    command: /bin/sh -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0' "
+    stdin_open: true
+    
+  frontend:
+    container_name: frontend
+    build: ./frontend/
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app:cached
+    tty: true
+    command: yarn run dev
+

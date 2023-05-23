@@ -1,0 +1,14 @@
+{
+	"generators": {
+		"548f4c54": {
+			"type": "local",
+			"path": "/app/.npm/_npx/0d023d73251f7b54/node_modules/create-nuxt-app/lib",
+			"hash": "548f4c54"
+		}
+	},
+	"answers": {
+		"548f4c54__npm__": {
+			"gitUsername": "nakagawa-216"
+		}
+	}
+}
