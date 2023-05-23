@@ -25,7 +25,14 @@
       }
     },
     methods: {
+      postLoginProcess() {
+        console.log('Logged in successfully');
+      },
+
+      // asyncを利用して、プロミスベースの非同期関数を宣言する
       async loginWithAuthModule() {
+        /*
+        // awaitキーワードを利用して、'this.$auth.loginWith'関数が完了するまで待機
         await this.$auth
           .loginWith('local', {
             data: {
@@ -44,6 +51,24 @@
               return error
             }
           )
+          */
+        try {
+          const response = await this.$auth.loginWith('local', {
+            data: {
+              email: this.email,
+              password: this.password,
+            },
+          });
+
+          localStorage.setItem('access-token', response.headers['access-token'])
+          localStorage.setItem('client', response.headers.client)
+          localStorage.setItem('uid', response.headers.uid)
+          localStorage.setItem('token-type', response.heades['token-type'])
+
+          this.postLoginProcess();
+        } catch (error) {
+          console.error(error);
+        }
       }
     }
   }
