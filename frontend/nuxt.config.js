@@ -56,7 +56,7 @@ export default {
       login: '/Login', //middleware:authを設定したURLにアクセスがあった場合の、リダイレクト先。
       logout: '/HomePage', //ログアウト後のリダイレクト先
       callback: false,
-      home: '/Home' ///ログイン後のリダイレクト先。
+      home: '/HomePage' ///ログイン後のリダイレクト先。
      },
     strategies: {
       local: {
