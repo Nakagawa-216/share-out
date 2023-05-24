@@ -1946,3 +1946,327 @@ Processing by Api::V1::Auth::RegistrationsController#create as HTML
 Completed 422 Unprocessable Entity in 398ms (Views: 0.3ms | ActiveRecord: 3.1ms | Allocations: 6090)
 
 
+Started POST "/api/v1/auth/sign_in" for 172.20.0.1 at 2023-05-23 21:25:08 +0000
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'app_development.schema_migrations' doesn't exist):
+  
+mysql2 (0.5.5) lib/mysql2/client.rb:151:in `_query'
+mysql2 (0.5.5) lib/mysql2/client.rb:151:in `block in query'
+mysql2 (0.5.5) lib/mysql2/client.rb:150:in `handle_interrupt'
+mysql2 (0.5.5) lib/mysql2/client.rb:150:in `query'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:632:in `block (2 levels) in raw_execute'
+activesupport (7.0.4.2) lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+activesupport (7.0.4.2) lib/active_support/dependencies/interlock.rb:41:in `permit_concurrent_loads'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:631:in `block in raw_execute'
+activesupport (7.0.4.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'
+activesupport (7.0.4.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'
+activesupport (7.0.4.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'
+activesupport (7.0.4.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_adapter.rb:765:in `block in log'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_adapter.rb:756:in `log'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:630:in `raw_execute'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql/database_statements.rb:96:in `raw_execute'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql/database_statements.rb:47:in `execute'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:207:in `execute_and_free'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:825:in `column_definitions'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/schema_statements.rb:116:in `columns'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/schema_cache.rb:117:in `block in columns'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/schema_cache.rb:116:in `fetch'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/schema_cache.rb:116:in `columns'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/schema_cache.rb:125:in `block in columns_hash'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/schema_cache.rb:124:in `fetch'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/schema_cache.rb:124:in `columns_hash'
+activerecord (7.0.4.2) lib/active_record/model_schema.rb:580:in `load_schema!'
+activerecord (7.0.4.2) lib/active_record/attributes.rb:264:in `load_schema!'
+activerecord (7.0.4.2) lib/active_record/encryption/encryptable_record.rb:122:in `load_schema!'
+activerecord (7.0.4.2) lib/active_record/model_schema.rb:566:in `block in load_schema'
+activerecord (7.0.4.2) lib/active_record/model_schema.rb:563:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/model_schema.rb:563:in `load_schema'
+activerecord (7.0.4.2) lib/active_record/model_schema.rb:419:in `columns_hash'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:1526:in `arel_column'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:1655:in `order_column'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:1619:in `block in preprocess_order_args'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:1616:in `map!'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:1616:in `preprocess_order_args'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:434:in `order!'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:429:in `order'
+activerecord (7.0.4.2) lib/active_record/querying.rb:22:in `order'
+activerecord (7.0.4.2) lib/active_record/schema_migration.rb:42:in `all_versions'
+activerecord (7.0.4.2) lib/active_record/migration.rb:1140:in `get_all_versions'
+activerecord (7.0.4.2) lib/active_record/migration.rb:1156:in `pending_migration_versions'
+activerecord (7.0.4.2) lib/active_record/migration.rb:1152:in `needs_migration?'
+activerecord (7.0.4.2) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4.2) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4.2) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4.2) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/sign_in" for 172.20.0.1 at 2023-05-23 21:48:08 +0000
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'app_development.schema_migrations' doesn't exist):
+  
+mysql2 (0.5.5) lib/mysql2/client.rb:151:in `_query'
+mysql2 (0.5.5) lib/mysql2/client.rb:151:in `block in query'
+mysql2 (0.5.5) lib/mysql2/client.rb:150:in `handle_interrupt'
+mysql2 (0.5.5) lib/mysql2/client.rb:150:in `query'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:632:in `block (2 levels) in raw_execute'
+activesupport (7.0.4.2) lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+activesupport (7.0.4.2) lib/active_support/dependencies/interlock.rb:41:in `permit_concurrent_loads'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:631:in `block in raw_execute'
+activesupport (7.0.4.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'
+activesupport (7.0.4.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'
+activesupport (7.0.4.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'
+activesupport (7.0.4.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_adapter.rb:765:in `block in log'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_adapter.rb:756:in `log'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:630:in `raw_execute'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql/database_statements.rb:96:in `raw_execute'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql/database_statements.rb:47:in `execute'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:207:in `execute_and_free'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:825:in `column_definitions'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/schema_statements.rb:116:in `columns'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/schema_cache.rb:117:in `block in columns'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/schema_cache.rb:116:in `fetch'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/schema_cache.rb:116:in `columns'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/schema_cache.rb:125:in `block in columns_hash'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/schema_cache.rb:124:in `fetch'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/schema_cache.rb:124:in `columns_hash'
+activerecord (7.0.4.2) lib/active_record/model_schema.rb:580:in `load_schema!'
+activerecord (7.0.4.2) lib/active_record/attributes.rb:264:in `load_schema!'
+activerecord (7.0.4.2) lib/active_record/encryption/encryptable_record.rb:122:in `load_schema!'
+activerecord (7.0.4.2) lib/active_record/model_schema.rb:566:in `block in load_schema'
+activerecord (7.0.4.2) lib/active_record/model_schema.rb:563:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/model_schema.rb:563:in `load_schema'
+activerecord (7.0.4.2) lib/active_record/model_schema.rb:419:in `columns_hash'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:1526:in `arel_column'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:1655:in `order_column'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:1619:in `block in preprocess_order_args'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:1616:in `map!'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:1616:in `preprocess_order_args'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:434:in `order!'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:429:in `order'
+activerecord (7.0.4.2) lib/active_record/querying.rb:22:in `order'
+activerecord (7.0.4.2) lib/active_record/schema_migration.rb:42:in `all_versions'
+activerecord (7.0.4.2) lib/active_record/migration.rb:1140:in `get_all_versions'
+activerecord (7.0.4.2) lib/active_record/migration.rb:1156:in `pending_migration_versions'
+activerecord (7.0.4.2) lib/active_record/migration.rb:1152:in `needs_migration?'
+activerecord (7.0.4.2) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4.2) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4.2) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4.2) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth" for 172.20.0.1 at 2023-05-23 21:48:16 +0000
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'app_development.schema_migrations' doesn't exist):
+  
+mysql2 (0.5.5) lib/mysql2/client.rb:151:in `_query'
+mysql2 (0.5.5) lib/mysql2/client.rb:151:in `block in query'
+mysql2 (0.5.5) lib/mysql2/client.rb:150:in `handle_interrupt'
+mysql2 (0.5.5) lib/mysql2/client.rb:150:in `query'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:632:in `block (2 levels) in raw_execute'
+activesupport (7.0.4.2) lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+activesupport (7.0.4.2) lib/active_support/dependencies/interlock.rb:41:in `permit_concurrent_loads'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:631:in `block in raw_execute'
+activesupport (7.0.4.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'
+activesupport (7.0.4.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'
+activesupport (7.0.4.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'
+activesupport (7.0.4.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_adapter.rb:765:in `block in log'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_adapter.rb:756:in `log'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:630:in `raw_execute'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql/database_statements.rb:96:in `raw_execute'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql/database_statements.rb:47:in `execute'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:207:in `execute_and_free'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:825:in `column_definitions'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/schema_statements.rb:116:in `columns'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/schema_cache.rb:117:in `block in columns'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/schema_cache.rb:116:in `fetch'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/schema_cache.rb:116:in `columns'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/schema_cache.rb:125:in `block in columns_hash'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/schema_cache.rb:124:in `fetch'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/schema_cache.rb:124:in `columns_hash'
+activerecord (7.0.4.2) lib/active_record/model_schema.rb:580:in `load_schema!'
+activerecord (7.0.4.2) lib/active_record/attributes.rb:264:in `load_schema!'
+activerecord (7.0.4.2) lib/active_record/encryption/encryptable_record.rb:122:in `load_schema!'
+activerecord (7.0.4.2) lib/active_record/model_schema.rb:566:in `block in load_schema'
+activerecord (7.0.4.2) lib/active_record/model_schema.rb:563:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/model_schema.rb:563:in `load_schema'
+activerecord (7.0.4.2) lib/active_record/model_schema.rb:419:in `columns_hash'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:1526:in `arel_column'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:1655:in `order_column'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:1619:in `block in preprocess_order_args'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:1616:in `map!'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:1616:in `preprocess_order_args'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:434:in `order!'
+activerecord (7.0.4.2) lib/active_record/relation/query_methods.rb:429:in `order'
+activerecord (7.0.4.2) lib/active_record/querying.rb:22:in `order'
+activerecord (7.0.4.2) lib/active_record/schema_migration.rb:42:in `all_versions'
+activerecord (7.0.4.2) lib/active_record/migration.rb:1140:in `get_all_versions'
+activerecord (7.0.4.2) lib/active_record/migration.rb:1156:in `pending_migration_versions'
+activerecord (7.0.4.2) lib/active_record/migration.rb:1152:in `needs_migration?'
+activerecord (7.0.4.2) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4.2) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4.2) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4.2) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.0) lib/rack/cors.rb:102:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (15.7ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (98.3ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (65.0ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to DeviseTokenAuthCreateUsers (20230311074339)
+  [1m[35m (141.8ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `provider` varchar(255) DEFAULT 'email' NOT NULL, `uid` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime(6), `allow_password_change` tinyint(1) DEFAULT FALSE, `remember_created_at` datetime(6), `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime(6), `last_sign_in_at` datetime(6), `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `confirmation_token` varchar(255), `confirmed_at` datetime(6), `confirmation_sent_at` datetime(6), `unconfirmed_email` varchar(255), `name` varchar(255), `nickname` varchar(255), `image` varchar(255), `email` varchar(255), `tokens` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (178.7ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35m (138.0ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_uid_and_provider` ON `users` (`uid`, `provider`)[0m
+  [1m[35m (126.3ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)[0m
+  [1m[35m (127.1ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_confirmation_token` ON `users` (`confirmation_token`)[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230311074339')[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTasks (20230325070153)
+  [1m[35m (86.8ms)[0m  [1m[35mCREATE TABLE `tasks` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255) NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230325070153')[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.5ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2023-05-24 10:59:38.089543', '2023-05-24 10:59:38.089543')[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started POST "/api/v1/auth" for 172.21.0.1 at 2023-05-24 11:14:16 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::Auth::RegistrationsController#create as HTML
+  Parameters: {"name"=>"Kou", "email"=>"tester@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "registration"=>{"name"=>"Kou", "email"=>"tester@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (4.9ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'tester@example.com' AND `users`.`provider` = 'email' LIMIT 1[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'tester@example.com' LIMIT 1[0m
+  [1m[36mUser Create (36.2ms)[0m  [1m[32mINSERT INTO `users` (`provider`, `uid`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `allow_password_change`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `unconfirmed_email`, `name`, `nickname`, `image`, `email`, `tokens`, `created_at`, `updated_at`) VALUES ('email', 'tester@example.com', '$2a$12$BnbrF4QcOu8PEFUDp3xNmOLkOtDx2EM4fxHo/5VP/EjvWTxnHqUt2', NULL, NULL, FALSE, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Kou', NULL, NULL, 'tester@example.com', NULL, '2023-05-24 11:14:26.045247', '2023-05-24 11:14:26.045247')[0m
+  [1m[36mTRANSACTION (35.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'tester@example.com' AND `users`.`id` != 1 LIMIT 1[0m
+  [1m[36mUser Update (17.7ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"33nkFVPRQEDXJLcOiDSkug\":{\"token\":\"$2a$10$YDF8u1Yhg2HHHg2NjCRXbOOlb6fTsLbR5LDgZRJyqjl/oLoJuP9bK\",\"expiry\":1686136466}}', `users`.`updated_at` = '2023-05-24 11:14:26.400314' WHERE `users`.`id` = 1[0m
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 3488ms (Views: 1.1ms | ActiveRecord: 136.5ms | Allocations: 41329)
+
+
+Started POST "/api/v1/auth/sign_in" for 172.21.0.1 at 2023-05-24 11:14:32 +0000
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"tester@example.com", "password"=>"[FILTERED]", "session"=>{"email"=>"tester@example.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f466d339748>, params: {"email"=>"tester@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"tester@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f466d339748>, params: {"email"=>"tester@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"tester@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mUser Load (11.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (BINARY email = 'tester@example.com' AND provider= 'email') ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f466d339748>, params: {"email"=>"tester@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"tester@example.com", "password"=>"[FILTERED]"}} }[0m
+[31mUnpermitted parameter: :session. Context: { controller: DeviseTokenAuth::SessionsController, action: create, request: #<ActionDispatch::Request:0x00007f466d339748>, params: {"email"=>"tester@example.com", "password"=>"[FILTERED]", "controller"=>"devise_token_auth/sessions", "action"=>"create", "session"=>{"email"=>"tester@example.com", "password"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (2.1ms)[0m  [1m[37mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1 FOR UPDATE[0m
+  [1m[36mUser Exists? (4.0ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'tester@example.com' AND `users`.`id` != 1 LIMIT 1[0m
+  [1m[36mUser Update (11.4ms)[0m  [1m[33mUPDATE `users` SET `users`.`tokens` = '{\"33nkFVPRQEDXJLcOiDSkug\":{\"token\":\"$2a$10$YDF8u1Yhg2HHHg2NjCRXbOOlb6fTsLbR5LDgZRJyqjl/oLoJuP9bK\",\"expiry\":1686136466},\"UYNXwFFGvpyljl5H--VhjQ\":{\"token\":\"$2a$10$sX/zP4M9p3jKHN3x1voNf.eMmCv.1BFuvHs.cEHDRysJj90L0C4VC\",\"expiry\":1686136473}}', `users`.`updated_at` = '2023-05-24 11:14:33.433484' WHERE `users`.`id` = 1[0m
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 1288ms (Views: 0.9ms | ActiveRecord: 48.1ms | Allocations: 9719)
+
+

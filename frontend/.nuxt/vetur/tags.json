@@ -1,20 +1,11 @@
 {
-  "Login": {
-    "description": "Auto imported from components/Login.vue"
-  },
   "Navbar": {
     "description": "Auto imported from components/Navbar.vue"
   },
   "NuxtLogo": {
     "description": "Auto imported from components/NuxtLogo.vue"
   },
-  "Signup": {
-    "description": "Auto imported from components/Signup.vue"
-  },
-  "Toppage": {
-    "description": "Auto imported from components/Toppage.vue"
-  },
-  "Tutorial": {
-    "description": "Auto imported from components/Tutorial.vue"
+  "UserStatus": {
+    "description": "Auto imported from components/UserStatus.vue"
   }
 }

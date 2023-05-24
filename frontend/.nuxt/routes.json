@@ -1,26 +1,32 @@
 [
   {
-    "name": "about",
-    "path": "/about",
-    "component": "/app/pages/about.vue",
-    "chunkName": "pages/about"
-  },
-  {
     "name": "App",
     "path": "/App",
     "component": "/app/pages/App.vue",
     "chunkName": "pages/App"
   },
   {
+    "name": "HomePage",
+    "path": "/HomePage",
+    "component": "/app/pages/HomePage.vue",
+    "chunkName": "pages/HomePage"
+  },
+  {
+    "name": "Login",
+    "path": "/Login",
+    "component": "/app/pages/Login.vue",
+    "chunkName": "pages/Login"
+  },
+  {
+    "name": "Signup",
+    "path": "/Signup",
+    "component": "/app/pages/Signup.vue",
+    "chunkName": "pages/Signup"
+  },
+  {
     "name": "users-signup2",
     "path": "/users/signup2",
     "component": "/app/pages/users/signup2.vue",
     "chunkName": "pages/users/signup2"
-  },
-  {
-    "name": "index",
-    "path": "/",
-    "component": "/app/pages/index.vue",
-    "chunkName": "pages/index"
   }
 ]

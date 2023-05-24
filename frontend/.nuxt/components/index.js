@@ -1,9 +1,6 @@
-export { default as Login } from '../../components/Login.vue'
 export { default as Navbar } from '../../components/Navbar.vue'
 export { default as NuxtLogo } from '../../components/NuxtLogo.vue'
-export { default as Signup } from '../../components/Signup.vue'
-export { default as Toppage } from '../../components/Toppage.vue'
-export { default as Tutorial } from '../../components/Tutorial.vue'
+export { default as UserStatus } from '../../components/UserStatus.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

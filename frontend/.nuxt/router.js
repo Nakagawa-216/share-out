@@ -4,10 +4,11 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _0e433b93 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
 const _0f2ae387 = () => interopDefault(import('../pages/App.vue' /* webpackChunkName: "pages/App" */))
+const _37fdf118 = () => interopDefault(import('../pages/HomePage.vue' /* webpackChunkName: "pages/HomePage" */))
+const _6f14d94f = () => interopDefault(import('../pages/Login.vue' /* webpackChunkName: "pages/Login" */))
+const _803f84bc = () => interopDefault(import('../pages/Signup.vue' /* webpackChunkName: "pages/Signup" */))
 const _7513e7ce = () => interopDefault(import('../pages/users/signup2.vue' /* webpackChunkName: "pages/users/signup2" */))
-const _2dfb1658 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -21,21 +22,25 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
-    path: "/about",
-    component: _0e433b93,
-    name: "about"
-  }, {
     path: "/App",
     component: _0f2ae387,
     name: "App"
   }, {
+    path: "/HomePage",
+    component: _37fdf118,
+    name: "HomePage"
+  }, {
+    path: "/Login",
+    component: _6f14d94f,
+    name: "Login"
+  }, {
+    path: "/Signup",
+    component: _803f84bc,
+    name: "Signup"
+  }, {
     path: "/users/signup2",
     component: _7513e7ce,
     name: "users-signup2"
-  }, {
-    path: "/",
-    component: _2dfb1658,
-    name: "index"
   }],
 
   fallback: false
