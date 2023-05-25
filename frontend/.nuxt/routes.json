@@ -3,30 +3,35 @@
     "name": "App",
     "path": "/App",
     "component": "/app/pages/App.vue",
-    "chunkName": "pages/App"
+    "chunkName": "pages/App",
+    "_name": "_0f2ae387"
   },
   {
     "name": "HomePage",
     "path": "/HomePage",
     "component": "/app/pages/HomePage.vue",
-    "chunkName": "pages/HomePage"
+    "chunkName": "pages/HomePage",
+    "_name": "_37fdf118"
   },
   {
     "name": "Login",
     "path": "/Login",
     "component": "/app/pages/Login.vue",
-    "chunkName": "pages/Login"
+    "chunkName": "pages/Login",
+    "_name": "_6f14d94f"
   },
   {
     "name": "Signup",
     "path": "/Signup",
     "component": "/app/pages/Signup.vue",
-    "chunkName": "pages/Signup"
+    "chunkName": "pages/Signup",
+    "_name": "_803f84bc"
   },
   {
     "name": "users-signup2",
     "path": "/users/signup2",
     "component": "/app/pages/users/signup2.vue",
-    "chunkName": "pages/users/signup2"
+    "chunkName": "pages/users/signup2",
+    "_name": "_7513e7ce"
   }
 ]

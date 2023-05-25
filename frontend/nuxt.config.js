@@ -44,7 +44,6 @@ export default {
   build: {
   },
 
-  
   axios: {
     // railsの立ち上げホストのlocalhost:8000を指定
     baseURL: 'http://localhost:8000'
