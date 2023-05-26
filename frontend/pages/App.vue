@@ -1,26 +1,13 @@
 <template>
   <div id="app">
-    <component :is="currentComponent" @navigate="switchComponent" />
+    <h1>POSTS</h1>
   </div>
 </template>
 
 <script>
-import HomePage from "./HomePage.vue";
-import Login from "./Login.vue";
-import Signup from "./Signup.vue";
 
 export default {
   name: "App",
-  components: {
-    HomePage,
-    Login,
-    Signup
-  },
-  data() {
-    return {
-      currentComponent: "HomePage"
-    };
-  },
   methods: {
   }
 };
