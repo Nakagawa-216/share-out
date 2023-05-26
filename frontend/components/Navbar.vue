@@ -1,8 +1,8 @@
 <template>
   <div>
-    <button @click="$emit('navigate', 'HomePage')">トップ画面へ</button>
-    <button @click="$emit('navigate', 'Login')">ログイン画面へ</button>
-    <button @click="$emit('navigate', 'Signup')">新規ユーザー登録画面へ</button>
+    <button @click="$router.push('App')">TOP</button>
+    <button @click="$router.push('Login')">Login</button>
+    <button @click="$router.push('Signup')">SignUp</button>
   </div>
 </template>
 

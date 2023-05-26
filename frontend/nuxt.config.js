@@ -44,7 +44,6 @@ export default {
   build: {
   },
 
-  
   axios: {
     // railsの立ち上げホストのlocalhost:8000を指定
     baseURL: 'http://localhost:8000'
@@ -55,9 +54,9 @@ export default {
   auth: {
     redirect: {
       login: '/Login', //middleware:authを設定したURLにアクセスがあった場合の、リダイレクト先。
-      logout: '/HomePage', //ログアウト後のリダイレクト先
+      logout: '/App', //ログアウト後のリダイレクト先
       callback: false,
-      home: '/HomePage' ///ログイン後のリダイレクト先。
+      home: '/App' ///ログイン後のリダイレクト先。
       
      },
     strategies: {
@@ -70,7 +69,11 @@ export default {
           logout: { url: '/api/v1/auth/sign_out', method: 'delete' },
 
           //ログイン時にユーザー情報を保存するか。
-          user: false 
+          user: {
+            url: '/api/v1/auth/validate_token',
+            method: 'get',
+            propertyName: false
+          }
          },
        }
      },

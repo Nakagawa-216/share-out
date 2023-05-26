@@ -1,10 +1,7 @@
 <template>
   <div>
     <div>
-      <h1>ShareOut</h1>
-    </div>
-    <div>
-      <p>投稿一覧</p>
+      <h1>POSTS</h1>
     </div>
   </div>
 </template>
