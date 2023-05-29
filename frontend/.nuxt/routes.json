@@ -28,6 +28,13 @@
     "_name": "_803f84bc"
   },
   {
+    "name": "user-EditUser",
+    "path": "/user/EditUser",
+    "component": "/app/pages/user/EditUser.vue",
+    "chunkName": "pages/user/EditUser",
+    "_name": "_43f66adf"
+  },
+  {
     "name": "user-MyPage",
     "path": "/user/MyPage",
     "component": "/app/pages/user/MyPage.vue",

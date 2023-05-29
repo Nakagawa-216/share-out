@@ -8,6 +8,7 @@ const _0f2ae387 = () => interopDefault(import('../pages/App.vue' /* webpackChunk
 const _37fdf118 = () => interopDefault(import('../pages/HomePage.vue' /* webpackChunkName: "pages/HomePage" */))
 const _6f14d94f = () => interopDefault(import('../pages/Login.vue' /* webpackChunkName: "pages/Login" */))
 const _803f84bc = () => interopDefault(import('../pages/Signup.vue' /* webpackChunkName: "pages/Signup" */))
+const _43f66adf = () => interopDefault(import('../pages/user/EditUser.vue' /* webpackChunkName: "pages/user/EditUser" */))
 const _2add09c5 = () => interopDefault(import('../pages/user/MyPage.vue' /* webpackChunkName: "pages/user/MyPage" */))
 
 const emptyFn = () => {}
@@ -37,6 +38,10 @@ export const routerOptions = {
     path: "/Signup",
     component: _803f84bc,
     name: "Signup"
+  }, {
+    path: "/user/EditUser",
+    component: _43f66adf,
+    name: "user-EditUser"
   }, {
     path: "/user/MyPage",
     component: _2add09c5,

@@ -2,7 +2,7 @@
   <div>
     <div v-if="$auth.loggedIn">
       <button @click="$router.push('/App')">TOP</button>
-      <button @click="$router.push('user/MyPage')">MyPage</button>
+      <button @click="$router.push('/user/MyPage')">MyPage</button>
     </div>
     <div v-else>
       <button @click="$router.push('App')">TOP</button>
