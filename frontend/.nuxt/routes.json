@@ -28,18 +28,10 @@
     "_name": "_803f84bc"
   },
   {
-<<<<<<< Updated upstream
     "name": "user-MyPage",
     "path": "/user/MyPage",
     "component": "/app/pages/user/MyPage.vue",
     "chunkName": "pages/user/MyPage",
     "_name": "_2add09c5"
-=======
-    "name": "users-signup2",
-    "path": "/users/signup2",
-    "component": "/app/pages/users/signup2.vue",
-    "chunkName": "pages/users/signup2",
-    "_name": "_7513e7ce"
->>>>>>> Stashed changes
   }
 ]
