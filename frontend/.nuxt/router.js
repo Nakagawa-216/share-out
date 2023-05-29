@@ -8,7 +8,7 @@ const _0f2ae387 = () => interopDefault(import('../pages/App.vue' /* webpackChunk
 const _37fdf118 = () => interopDefault(import('../pages/HomePage.vue' /* webpackChunkName: "pages/HomePage" */))
 const _6f14d94f = () => interopDefault(import('../pages/Login.vue' /* webpackChunkName: "pages/Login" */))
 const _803f84bc = () => interopDefault(import('../pages/Signup.vue' /* webpackChunkName: "pages/Signup" */))
-const _7513e7ce = () => interopDefault(import('../pages/users/signup2.vue' /* webpackChunkName: "pages/users/signup2" */))
+const _2add09c5 = () => interopDefault(import('../pages/user/MyPage.vue' /* webpackChunkName: "pages/user/MyPage" */))
 
 const emptyFn = () => {}
 
@@ -38,9 +38,9 @@ export const routerOptions = {
     component: _803f84bc,
     name: "Signup"
   }, {
-    path: "/users/signup2",
-    component: _7513e7ce,
-    name: "users-signup2"
+    path: "/user/MyPage",
+    component: _2add09c5,
+    name: "user-MyPage"
   }],
 
   fallback: false
