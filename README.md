@@ -2,10 +2,12 @@
 
 ## プロジェクト概要
 
-フィットネスのアクティビティをシェアできるWEBアプリケーションを作成しました。
+ポートフォリオ作品として、フィットネスのアクティビティをシェアできるWEBアプリケーションを作成しました。
+
 
 ## Test Plan
 
-We follow a strict testing protocol to ensure the quality and reliability of our application. 
+コードや機能の品質向上および自分の技術力向上を目的とし、
+本プロジェクトではテスト駆動開発の手法を一部取り入れました。
 
-For more details, check out our [Test Plan](./testplan.md).
+テスト計画については [テスト計画](./testplan.md)に掲載しておりますので、ご確認お願いします。
