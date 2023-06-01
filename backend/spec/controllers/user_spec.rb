@@ -9,6 +9,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
     before do
       sign_in user
     end
+    
     it 'リクエストに対して成功レスポンスを返すこと' do
       get :show
       expect(response.body).to eq(user.to_json)
