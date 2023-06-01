@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::UsersController, type: :controller do
+  # 遅延評価される変数をlet()で定義。itブロックで何度呼び出されても一度だけ評価される。
+  # :userというfactoryを使用してUserオブジェクトをデータベースに保存
   let(:user) { create(:user) }
 
   describe 'Get #show' do
