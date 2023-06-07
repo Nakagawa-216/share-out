@@ -10,7 +10,7 @@
 ### Railsのルール
 *.rbc
 capybara-*.html
-.rspec
+# .rspec 公開されていた.gitignoreでは含まれていたが、本PJではgitでバージョン管理する
 /backend/db/*.sqlite3
 /backend/db/*.sqlite3-journal
 /backend/db/*.sqlite3-[0-9]*
@@ -59,6 +59,7 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+.irb_history
 
 # Ignore node_modules
 node_modules/
