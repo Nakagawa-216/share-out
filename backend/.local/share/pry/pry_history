@@ -1,6 +1,0 @@
-current_user
-sign_in user
-api_v1_user_path(current_user)
-api_v1_user_path(current_user.id)
-current_user.id
-exit
