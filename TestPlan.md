@@ -10,7 +10,7 @@
 ### Rails
 
 1. ユーザー認証機能（Devise & Devise_token_auth）
-2. マイページ/ユーザー情報編集機能（UserController）
+2. ユーザーページ（マイページ含む）機能（UsersController）
 
 ### Nuxt.js
 
@@ -18,7 +18,10 @@
 
 ## テストケース一覧
 
-1. ユーザー認証機能 - [テストケース](./testcases/User-auth.md)
+### Rails
+
+1. ユーザー認証機能 - [テストケース](./testcases/UserAuth.md)
+2. ユーザーページ（マイページ含む）機能 - [テストケース](./testcases/UserPage.md)
 
 ## テスト戦略
 

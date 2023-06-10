@@ -1,8 +1,10 @@
 class Api::V1::UsersController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
   def show
-    render json: current_user
+    user = User.find(params[:id])
+    binding.irb
+    render json: user
   end
 
   def update
@@ -16,6 +18,6 @@ class Api::V1::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name)
+    params.require(:user).permit(:name, :id)
   end
 end
