@@ -5,12 +5,17 @@
 本ドキュメントの目的は明示的にテストケースをまとめ、
 テスト全体を見える化して、自身や閲覧者の方にも何をしたか理解しやすいようにすることです。
 
-## テスト対象
+## テストケース一覧
 
 ### Rails
+#### ModelSpec
+1. Userモデル
+2. Postモデル
 
+#### RequestSpec
 1. ユーザー認証機能（Devise & Devise_token_auth）
 2. ユーザーページ（マイページ含む）機能（UsersController）
+3. Post投稿機能（PostsControlelr）
 
 ### Nuxt.js
 
@@ -22,6 +27,7 @@
 
 1. ユーザー認証機能 - [テストケース](./testcases/UserAuth.md)
 2. ユーザーページ（マイページ含む）機能 - [テストケース](./testcases/UserPage.md)
+3. POST投稿機能 - [テストケース](./testcases/Posts.md)
 
 ## テスト戦略
 
