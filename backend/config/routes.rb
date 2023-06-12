@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       mount_devise_token_auth_for "User", at: "auth", controllers: {
         registrations: 'api/v1/auth/registrations'
       }
-      resource :users, only: [:show, :update]
+      resources :users, only: [:show, :update]
     end
   end
 end

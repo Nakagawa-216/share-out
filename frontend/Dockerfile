@@ -8,6 +8,8 @@ ENV HOST 0.0.0.0
 
 WORKDIR ${HOME}
 
+COPY . .
+
 #yarn installが実行される前にpackage.json yarn.lockをコピー
 COPY package.json yarn.lock ./
 
@@ -21,5 +23,3 @@ RUN apk update && \
 ENV PATH /app/node_modules/.bin:$PATH
 
 RUN yarn build
-
-COPY . .
