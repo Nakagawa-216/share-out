@@ -7,6 +7,7 @@ Rails.application.routes.draw do
         registrations: 'api/v1/auth/registrations'
       }
       resources :users, only: [:show, :update]
+      resources :posts
     end
   end
 end
