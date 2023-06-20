@@ -16,7 +16,8 @@
       };
     },
     async mounted() {
-      const response = await this.$axios.get('/api/v1/users');
+      const id = this.$auth.user.data.id
+      const response = await this.$axios.get('/api/v1/users/' + id);
       this.user = response.data;
     }
   }
