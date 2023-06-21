@@ -27,7 +27,7 @@ export default{
   methods: {
     async updata() {
       try{
-        await this.$axios.$put('/api/v1/users', {
+        await this.$axios.$put('/api/v1/users/', {
           name: this.name,
           email: this.email
         })
